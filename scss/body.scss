@@ -1,0 +1,65 @@
+@import '_colors';
+@import '_header';
+
+$main-text-color: $darkBrown;
+
+$main-headline-color: $darkBrown;
+
+$main-container-bg: $almost-white;
+
+$main-container-border: .15rem solid $sageGreen;
+
+@mixin body-bg($color,$bg-img,$repeat,$v-position,$h-position,$sepia,$bg-size) {
+  background: $color $bg-img $repeat $v-position $h-position;
+  -webkit-filter: sepia($sepia);
+  filter: sepia($sepia);
+  background-size: $bg-size;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: $main-text-color;
+  height: 100%;
+  padding: 1.5rem 0 2.5rem;
+  @include body-bg($sand, url('../photos/Bisbee_panorama_2009.jpg'), no-repeat, bottom, left, .7, cover);
+
+  .maincontainerwrap {
+    background: $main-container-bg;
+    border-radius: .5rem;
+    width: 62%;
+    margin: auto;
+    padding: .25rem;
+
+    .maincontainer {
+      background: inherit;
+      border-radius: inherit;
+      margin: auto;
+//      height: 92%;
+//      width: 92%;
+//      box-sizing: border-box;
+      padding: 1.25rem 1.5rem 0.5rem;
+      border: $main-container-border;
+
+//      .left-hand h2 {
+//        margin-top: 0;
+//      }
+
+      .right-hand {
+        margin-left: 1.5rem;
+        width: 45%;
+
+        float: right;
+
+        img {
+//          position: relative;
+          float: right;
+          width: 100%;
+          box-sizing: border-box;
+          border: 1rem solid $sageGreen;
+          border-radius: .3rem;
+          box-shadow: 0 .1rem $darkGreen;
+        }
+      }
+    }
+  }
+}

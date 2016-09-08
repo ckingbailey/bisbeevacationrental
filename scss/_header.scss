@@ -1,0 +1,46 @@
+// @import colors
+
+@mixin navbar-button($text-color,$bg-color,$border-color) {
+  padding: 0.5rem 1.3rem;
+  color:$text-color;
+  background-color: $bg-color;
+  border-radius: .3rem;
+  transition: .25s ease-in;
+  text-decoration: none;
+}
+
+.header {
+  text-align: center;
+
+  h1 {
+    font-family: 'Rye', cursive;
+    font-weight: 400;
+    color: $darkGreen;
+    letter-spacing: 0.075rem;
+  }
+
+  h3 {
+    color: $brown;
+    font-weight: 400;
+  }
+
+  ul.navbar {
+
+    font-size: small;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+
+    li {
+      display: inline;
+      list-style-type: none;
+
+      a {
+        @include navbar-button($yellowOrange,$darkPurple,$darkPurple);
+
+        &:hover{
+          @include navbar-button($yellow,$blue,$darkBlue);
+        }
+      }
+    }
+  }
+}

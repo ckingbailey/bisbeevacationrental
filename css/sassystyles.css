@@ -1,0 +1,66 @@
+.header {
+  text-align: center; }
+  .header h1 {
+    font-family: 'Rye', cursive;
+    font-weight: 400;
+    color: #333f20;
+    letter-spacing: 0.075rem; }
+  .header h3 {
+    color: #532;
+    font-weight: 400; }
+  .header ul.navbar {
+    font-size: small;
+    text-transform: uppercase;
+    letter-spacing: .2rem; }
+    .header ul.navbar li {
+      display: inline;
+      list-style-type: none; }
+      .header ul.navbar li a {
+        padding: 0.5rem 1.3rem;
+        color: #da2;
+        background-color: #383644;
+        border-radius: .3rem;
+        transition: .25s ease-in;
+        text-decoration: none; }
+        .header ul.navbar li a:hover {
+          padding: 0.5rem 1.3rem;
+          color: #fd0;
+          background-color: #29f;
+          border-radius: .3rem;
+          transition: .25s ease-in;
+          text-decoration: none; }
+
+body {
+  font-family: Georgia, serif;
+  color: #321;
+  height: 100%;
+  padding: 1.5rem 0 2.5rem;
+  background: #dc9 url("../photos/Bisbee_panorama_2009.jpg") no-repeat bottom left;
+  -webkit-filter: sepia(0.7);
+  filter: sepia(0.7);
+  background-size: cover; }
+  body .maincontainerwrap {
+    background: #fafcf0;
+    border-radius: .5rem;
+    width: 62%;
+    margin: auto;
+    padding: .25rem; }
+    body .maincontainerwrap .maincontainer {
+      background: inherit;
+      border-radius: inherit;
+      margin: auto;
+      padding: 1.25rem 1.5rem 0.5rem;
+      border: 0.15rem solid #ab8; }
+      body .maincontainerwrap .maincontainer .right-hand {
+        margin-left: 1.5rem;
+        width: 45%;
+        float: right; }
+        body .maincontainerwrap .maincontainer .right-hand img {
+          float: right;
+          width: 100%;
+          box-sizing: border-box;
+          border: 1rem solid #ab8;
+          border-radius: .3rem;
+          box-shadow: 0 0.1rem #333f20; }
+
+/*# sourceMappingURL=sassystyles.css.map */
