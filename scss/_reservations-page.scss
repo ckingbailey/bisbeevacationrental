@@ -1,0 +1,40 @@
+@mixin triangle($dir,$triangle-height,$triangle-width,$triangle-color){
+  $triangle: $triangle-width solid;
+  $yes-triangle: $triangle $triangle-color;
+  $no-triangle: $triangle transparent;
+  width: 0;
+  height: 0;
+  border-top: $triangle-height solid transparent;
+  border-bottom: $triangle-height solid transparent;
+  @if $dir=='left' {
+    border-right: $yes-triangle;
+    border-left: $no-triangle;
+  }
+  @else {
+    border-right: $no-triangle;
+    border-left: $yes-triangle;
+    }
+
+}
+
+$indicative-blue: lighten($blue,20%);
+
+.left-triangle {
+  @include triangle(left,4rem,.75rem,$indicative-blue);
+/*  width: 0;
+  height: 0;
+  border-top: 3rem solid transparent;
+  border-bottom: 3rem solid transparent;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid $blue;*/
+}
+
+.right-triangle {
+  @include triangle(right,4rem,.75rem,$indicative-blue);
+/*  width: 0;
+  height: 0;
+  border-top: 3rem solid transparent;
+  border-bottom: 3rem solid transparent;
+  border-left: 1rem solid $blue;
+  border-right: 1rem solid transparent;*/
+}

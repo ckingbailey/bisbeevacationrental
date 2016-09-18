@@ -7,41 +7,39 @@
   <meta name="keywords" content="Bisbee, Bisbee AZ, Bisbee Vacation Rental">
   <meta content="CKB" name="author">
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <link href="css/style1.css" rel="stylesheet" type="text/css"/>
+  <link href="css/sassystyles.css" rel="stylesheet" type="text/css"/>
+  <!--<link href="css/style1.css" rel="stylesheet" type="text/css"/>-->
   <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
 
 </head>
 <body>
- <div id="maincontainer">
+  <div class="bg-container">
+  <span>...</span></div>
+  <div class="maincontainerwrap">
+   <div class="maincontainer">
 
 <!--here begins the header, which I will use on all pages-->
-  <div id="header">
-    <h1>Welcome to Javelina Junction</h1>
+    <div class="header">
+      <h1>Welcome to Hilltop House</h1>
 
-    <h3>129 High Road<br>
-    Bisbee, AZ</h3>
+      <h3>129 High Road<br>
+      Bisbee, AZ</h3>
 
-  <div id="navbar">
-	<a href="index.html">
-Home</a>
+    <ul class="navbar">
+  	<li><a href="index.html">
+  Home</a></li>
 
-  	<a href="photos.html">
-Photos</a>
+    	<li><a href="photos.html">
+  Photos</a></li>
 
-   	<a href="testimonials.html">
-Testimonials</a>
+   	<li><a href="reservations.html">
+  Resersations</a></li>
+  </ul>
 
-	<a href="links.html">
-Links</a>
+  <hr class="border">
 
- 	<a href="mailto:sallie.soto@bisbeerealty.com">
-Reservations</a>
-</div>
-
-<hr class="border">
-
-<!--    <img class="border" style="width: 767px; height: 11px;" alt="" src="NavajoBorder.gif">-->
-  </div>
+  <!--    <img class="border" style="width: 767px; height: 11px;" alt="" src="NavajoBorder.gif">-->
+    </div>
 
 
 <!--end header-->
@@ -50,9 +48,11 @@ Reservations</a>
 
 
 <!--right-hand photo-->
-<a class="right-hand" href="photos.html"><img title="More photos..." alt="Hillside House" src="photos/cacti.jpg"></a>
-
-
+<div class="right-hand">
+  <div class="photo-wrapper">
+    <img title="Cacti in the Front Yard" alt="a row of nopales cacti" src="photos/cacti.jpg">
+  </div>
+</div>
 
 <div class="left-hand">
   <h2>Panoramic Views of the Mountains and Mexico. Walk to Town in Minutes.</h2>
@@ -82,4 +82,5 @@ and across the high desert as far as the mountains of Mexico.</p>
 <!-- <div id="footer">
 <img alt="Bisbee panoramic from the house" src="photos/panorama2.jpg" style="width: 760px"></div> -->
 
+</div>
 </div></body></html>
