@@ -239,7 +239,6 @@ body {
       border: 0.15rem solid #c1cea8; }
       body .maincontainerwrap .maincontainer a {
         text-decoration: none;
-        font-style: italic;
         color: #36a; }
       body .maincontainerwrap .maincontainer a:hover {
         color: #29f; }
