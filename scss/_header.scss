@@ -33,12 +33,15 @@
     li {
       display: inline;
       list-style-type: none;
+      width: 12rem;
 
       a {
+        display: inline-block;
+//        width: 8rem;
         @include navbar-button($yellowOrange,$darkPurple,$darkPurple);
 
         &:hover{
-          @include navbar-button($yellow,$blue,$darkBlue);
+          @include navbar-button($brown,lighten($blue,20%),$darkBlue);
         }
       }
     }

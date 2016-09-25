@@ -3,100 +3,91 @@
 <html>
 <head>
 
-  <title>Welcome to Hilltop House</title>
-  <meta name="description" content="Vacation rental cottage in Bisbee, AZ">
+  <title>Photos of Hilltop House</title>
+  <meta name="description" content="photos of vacation rental cottage in Bisbee, AZ">
   <meta name="keywords" content="Bisbee, Bisbee AZ, Bisbee Vacation Rental">
   <meta content="CKB" name="author">
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <link href="css/style1.css" rel="stylesheet" type="text/css"/>
+  <!--Foundation 6-->
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">-->
   <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+  <!--slick photo carousel-->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <!--and the default slick style, for now-->
+  <link href="css/sassystyles.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
-<body><div id="mastercontainer">
-
-<!--here begins the header, which I will use on all pages-->
-  <div id="header">
-    <a href="index.html"><img alt="Welcome to Hilltop House" src="WelcometoHilltopHouse.gif"></a>
-
-    <p><a href="map.html" title="map & directions...">129 High Road<br>
-    Bisbee, AZ</a></p>
-
-  <div id="navbar">
-	<a href="index.html">
-Home</a>
-
-  	<a href="photos.html">
-Photos</a>
-
-   	<a href="testimonials.html">
-Testimonials</a>
-
-	<a href="links.html">
-Links</a>
-
- 	<a href="mailto:sallie.soto@bisbeerealty.com">
-Reservations</a></div>
-
-
-    <img class="border" style="width: 767px; height: 11px;" alt="" src="NavajoBorder.gif">
+<body>
+  <div class="bg-container">
   </div>
+<!--<div class="row">
+    <div class="medium-10 column">-->
+  <div class="maincontainerwrap">
+    <div class="maincontainer">
+
+      <!--here begins the header, which I will use on all pages-->
+      <div class="header">
+        <h1>Welcome to Hilltop House</h1>
+
+        <h3>129 High Road<br>
+        Bisbee, AZ</h3>
+
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="photos.html">Photos</a></li>
+
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+
+        <hr class="border">
+
+      </div>
+      <!--end header-->
+
+      <div class="bodycontent">
+
+        <div class="quote-container">
+          <q class="testimonial">So much more than expected...the views are phenomenal!...and every creature comfort</q>
+          <cite>Pat Ann &amp; Cathy, Phoenix </cite>
+        </div>
+
+          <div class="slideCarousel">
+            <div><img src="photos/keepers/living.jpg"/></div>
+            <div><img src="photos/keepers/kitchen.jpg"/></div>
+            <div><img src="photos/keepers/diningandkitchen.jpg"/></div>
+            <div><img src="photos/keepers/bed0.jpg"/></div>
+            <div><img src="photos/keepers/bed1.jpg"/></div>
+            <div><img src="photos/keepers/bed2.jpg"/></div>
+            <div><img src="photos/keepers/breakfastnook.jpg"/></div>
+            <div><img src="photos/keepers/deckchairs.jpg"/></div>
+            <div><img src="photos/keepers/baywindow.jpg"/></div>
+          </div>
 
 
-<!--end header-->
+      </div>
+    </div>
+  </div>
+<!--</div>
+</div>-->
 
-<div class="bodycontent">
+  <!--slick carousel js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
-<!--leftmost column, exterior shots of house-->
-<!--make a photo viewer, bitch!-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.slideCarousel').slick({
+        centerMode: true,
+        centerPadding: '2rem',
+        dots: true,
+        arrows: true,
+        infinite: true,
+        variableWidth: true
+    });
+  });
+  </script>
 
-</ul>
-
-<!--right column-->
-  <ul id="column3">
-    <li><a href="photos/kitchen.jpg" target="_blank">
-      <img src="photos/kitchen.jpg" alt="kitchen"></a></li>
-
-
-    <li><a href="photos/living.jpg" target="_blank">
-      <img src="photos/living.jpg" alt="living room"></a></li>
-
-<li><a href="photos/breakfastnook.jpg" target="_blank">
-      <img src="photos/breakfastnook.jpg" alt="living room"></a></li>
-
-
-</ul>
-
-<!--middle column-->
-  <ul id="column2">
-
-    <li><a href="photos/bed1.jpg" target="_blank">
-      <img src="photos/bed1.jpg" alt="master bedroom"></a></li>
-
-    <li><a href="photos/bed0.jpg" target="_blank">
-      <img src="photos/bed0.jpg" alt="bedroom number 2"></a></li>
-
-    <li><a href="photos/diningandkitchen.jpg" target="_blank">
-      <img src="photos/diningandkitchen.jpg" alt="dining room and kitchen behind"></a></li>
-
-</ul>
-
-<!--left column-->
-  <ul id="column4">
-
-      <li><a href="photos/exteriorSideyard.jpg" target="_blank">
-      <img src="photos/exteriorSideyard.jpg" alt="side of the house"></a></li>
-
-
-    <li><a href="photos/viewwest.jpg" target="_blank">
-      <img src="photos/viewwest.jpg" alt="The view west"></a></li>
-
-
-    <li><a href="photos/deckchairs.jpg" target="_blank">
-      <img src="photos/deckchairs.jpg" alt="side porch and chairs"></a></li>
-
-
-</div></div>
-<!--<div id="footer">
-<img alt="Bisbee panoramic from the house" src="photos/panorama2.jpg" style="width: 800px"></div>-->
 </body></html>

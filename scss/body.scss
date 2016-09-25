@@ -1,34 +1,52 @@
 @import '_colors';
 @import '_header';
+@import '_photo-page';
+@import '_my-slick-theme';
+@import '_reservations-page';
 
 $main-text-color: $darkBrown;
 
 $main-headline-color: $darkBrown;
 
-$main-container-bg: $almost-white;
+$main-container-bg: $off-white;
 
-$main-container-border: .15rem solid $sageGreen;
+$main-container-border: .15rem solid lighten($sageGreen,10%);
 
-@mixin body-bg($color,$bg-img,$repeat,$v-position,$h-position,$sepia,$bg-size) {
-  background: $color $bg-img $repeat $v-position $h-position;
-  -webkit-filter: sepia($sepia);
-  filter: sepia($sepia);
-  background-size: $bg-size;
+@mixin body-bg($bg-img,$repeat,$v-position,$h-position,$b-w,$sepia) {
+  $filter: grayscale($b-w) sepia($sepia);
+  background: $bg-img $repeat; //$v-position $h-position;
+  -webkit-filter: $filter;
+  filter: $filter;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 body {
   font-family: Georgia, serif;
   color: $main-text-color;
   height: 100%;
-  padding: 1.5rem 0 2.5rem;
-  @include body-bg($sand, url('../photos/Bisbee_panorama_2009.jpg'), no-repeat, bottom, left, .7, cover);
+  padding: 0;
+  margin: 0;
+
+  .bg-container {
+    @include body-bg(url('../photos/Bisbee_panorama_2009.JPG'), no-repeat, bottom, left, 30%, 20%);
+  }
 
   .maincontainerwrap {
     background: $main-container-bg;
     border-radius: .5rem;
     width: 62%;
-    margin: auto;
+    margin: 1.5rem auto 2.5rem;
     padding: .25rem;
+    z-index: 2;
 
     .maincontainer {
       background: inherit;
@@ -44,20 +62,36 @@ body {
 //        margin-top: 0;
 //      }
 
+      a {
+        text-decoration: none;
+        color: $darkBlue;
+      }
+
+      a:hover {
+        color: $blue;
+      }
+
       .right-hand {
         margin-left: 1.5rem;
         width: 45%;
-
         float: right;
+        background: pink;
+
+        .photo-wrapper {
+          border-radius: .3rem;
+          overflow: hidden;
+          border: .25rem solid lighten($sageGreen,0%);
+          box-shadow: 0 .1rem 0.1rem darken($sageGreen,30%);
+        }
 
         img {
 //          position: relative;
           float: right;
           width: 100%;
           box-sizing: border-box;
-          border: 1rem solid $sageGreen;
-          border-radius: .3rem;
-          box-shadow: 0 .1rem $darkGreen;
+//          border: 1rem solid $sageGreen;
+//          border-radius: .3rem;
+//          box-shadow: 0 .1rem $darkGreen;
         }
       }
     }
