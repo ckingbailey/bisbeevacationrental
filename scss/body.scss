@@ -4,6 +4,8 @@
 @import '_my-slick-theme';
 @import '_reservations-page';
 
+$primary-font-family: Georgia, serif;
+
 $main-text-color: $darkBrown;
 
 $main-headline-color: $darkBrown;
@@ -11,6 +13,8 @@ $main-headline-color: $darkBrown;
 $main-container-bg: $off-white;
 
 $main-container-border: .15rem solid lighten($sageGreen,10%);
+
+$main-container-outline: .2rem solid $off-white;
 
 @mixin body-bg($bg-img,$repeat,$v-position,$h-position,$b-w,$sepia) {
   $filter: grayscale($b-w) sepia($sepia);
@@ -29,8 +33,34 @@ $main-container-border: .15rem solid lighten($sageGreen,10%);
   z-index: -1;
 }
 
+//font-family declared separately for headline, body elements for easy of future customization
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font-family;
+}
+
+div, p {
+  font-family: $primary-font-family;
+}
+
+a, form {
+  font-family: $primary-font-family;
+}
+
+ul, ol, li, dl, dd {
+  font-family: $primary-font-family;
+}
+
+q, blockquote, cite {
+  font-family: $primary-font-family;
+}
+
+td, th, {
+  font-family: $primary-font-family;
+}
+
 body {
-  font-family: Georgia, serif;
+  font-family: $primary-font-family;
   color: $main-text-color;
   height: 100%;
   padding: 0;
@@ -40,23 +70,29 @@ body {
     @include body-bg(url('../photos/Bisbee_panorama_2009.JPG'), no-repeat, bottom, left, 30%, 20%);
   }
 
+  &>.row {
+    margin: 1.5rem auto 2.5rem;
+  }
+
   .maincontainerwrap {
     background: $main-container-bg;
     border-radius: .5rem;
-    width: 62%;
-    margin: 1.5rem auto 2.5rem;
+//    width: 62%;
+//    margin: 1.5rem auto 2.5rem;
     padding: .25rem;
-    z-index: 2;
+//    z-index: 2;
+  }
 
     .maincontainer {
-      background: inherit;
-      border-radius: inherit;
-      margin: auto;
+      background: $main-container-bg;
+      border-radius: .5rem;
+//      margin: auto;
 //      height: 92%;
 //      width: 92%;
 //      box-sizing: border-box;
       padding: 1.25rem 1.5rem 0.5rem;
       border: $main-container-border;
+//      outline: $main-container-outline;
 
 //      .left-hand h2 {
 //        margin-top: 0;
@@ -72,7 +108,7 @@ body {
       }
 
       .right-hand {
-        margin-left: 1.5rem;
+        margin: 0 0 1rem 1.5rem;
         width: 45%;
         float: right;
         background: pink;
@@ -95,5 +131,4 @@ body {
         }
       }
     }
-  }
 }
