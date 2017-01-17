@@ -1,0 +1,32 @@
+{
+  "name": "bisbeevacationrental.com",
+  "version": "1.0.0",
+  "description": "Vacation rental cottage in Bisbee, AZ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckingbailey/bisbeevacationrental.git"
+  },
+  "keywords": [
+    "Bisbee",
+    "Bisbee",
+    "AZ",
+    "Bisbee",
+    "vacation",
+    "rental"
+  ],
+  "author": "ckingbailey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckingbailey/bisbeevacationrental/issues"
+  },
+  "homepage": "https://github.com/ckingbailey/bisbeevacationrental#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^2.0.0",
+    "imagemin": "^5.2.2"
+  }
+}
