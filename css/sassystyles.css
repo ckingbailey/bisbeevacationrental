@@ -6,11 +6,13 @@
     font-weight: 400;
     color: #333f20;
     letter-spacing: 0.075rem; }
+    .header h1:first-child {
+      margin-top: .5rem; }
   .header h3 {
     color: #532;
     font-weight: 400; }
   .header ul.navbar {
-    font-size: small;
+    font-size: medium;
     text-transform: uppercase;
     letter-spacing: .2rem; }
     .header ul.navbar li {
@@ -19,19 +21,21 @@
       width: 12rem; }
       .header ul.navbar li a {
         display: inline-block;
-        padding: 0.5rem 1.3rem;
+        padding: 0.4rem 1.3rem;
         color: #da2;
         background-color: #383644;
         border-radius: .3rem;
         transition: .25s ease-in;
         text-decoration: none; }
         .header ul.navbar li a:hover {
-          padding: 0.5rem 1.3rem;
+          padding: 0.4rem 1.3rem;
           color: #532;
           background-color: #88c8ff;
           border-radius: .3rem;
           transition: .25s ease-in;
           text-decoration: none; }
+  .header .border {
+    margin: 1.25rem auto 1.5rem auto; }
 
 div.quote-container {
   margin: 2rem 1.25rem;
@@ -205,6 +209,24 @@ div.quote-container {
   border: none;
   box-shadow: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif; }
+
+div, p {
+  font-family: Georgia, serif; }
+
+a, form {
+  font-family: Georgia, serif; }
+
+ul, ol, li, dl, dd {
+  font-family: Georgia, serif; }
+
+q, blockquote, cite {
+  font-family: Georgia, serif; }
+
+td, th {
+  font-family: Georgia, serif; }
+
 body {
   font-family: Georgia, serif;
   color: #321;
@@ -224,37 +246,35 @@ body {
     bottom: 0;
     left: 0;
     z-index: -1; }
+  body > .row {
+    margin: 1.5rem auto 2.5rem; }
   body .maincontainerwrap {
     background: #f6faec;
     border-radius: .5rem;
-    width: 62%;
-    margin: 1.5rem auto 2.5rem;
-    padding: .25rem;
-    z-index: 2; }
-    body .maincontainerwrap .maincontainer {
-      background: inherit;
-      border-radius: inherit;
-      margin: auto;
-      padding: 1.25rem 1.5rem 0.5rem;
-      border: 0.15rem solid #c1cea8; }
-      body .maincontainerwrap .maincontainer a {
-        text-decoration: none;
-        color: #36a; }
-      body .maincontainerwrap .maincontainer a:hover {
-        color: #29f; }
-      body .maincontainerwrap .maincontainer .right-hand {
-        margin-left: 1.5rem;
-        width: 45%;
+    padding: .25rem; }
+  body .maincontainer {
+    background: #f6faec;
+    border-radius: .5rem;
+    padding: 1.25rem 1.5rem 0.5rem;
+    border: 0.15rem solid #c1cea8; }
+    body .maincontainer a {
+      text-decoration: none;
+      color: #36a; }
+    body .maincontainer a:hover {
+      color: #29f; }
+    body .maincontainer .right-hand {
+      margin: 0 0 1rem 1.5rem;
+      width: 45%;
+      float: right;
+      background: pink; }
+      body .maincontainer .right-hand .photo-wrapper {
+        border-radius: .3rem;
+        overflow: hidden;
+        border: 0.25rem solid #aabb88;
+        box-shadow: 0 0.1rem 0.1rem #5d6c3e; }
+      body .maincontainer .right-hand img {
         float: right;
-        background: pink; }
-        body .maincontainerwrap .maincontainer .right-hand .photo-wrapper {
-          border-radius: .3rem;
-          overflow: hidden;
-          border: 0.25rem solid #aabb88;
-          box-shadow: 0 0.1rem 0.1rem #5d6c3e; }
-        body .maincontainerwrap .maincontainer .right-hand img {
-          float: right;
-          width: 100%;
-          box-sizing: border-box; }
+        width: 100%;
+        box-sizing: border-box; }
 
 /*# sourceMappingURL=sassystyles.css.map */
