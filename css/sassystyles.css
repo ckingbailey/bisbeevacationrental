@@ -112,12 +112,12 @@ div.quote-container {
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -22px; }
+  left: -32px; }
   [dir="rtl"] .slick-prev {
     left: auto;
     right: -25px; }
   .slick-prev:before {
-    content: '';
+    content: '.';
     width: 0;
     height: 0;
     border-top: 5rem solid transparent;
@@ -128,12 +128,12 @@ div.quote-container {
       content: "⟩"; }
 
 .slick-next {
-  right: -22px; }
+  right: -28px; }
   [dir="rtl"] .slick-next {
     left: -25px;
     right: auto; }
   .slick-next:before {
-    content: '';
+    content: '.';
     width: 0;
     height: 0;
     border-top: 5rem solid transparent;

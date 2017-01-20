@@ -129,13 +129,13 @@ $indicative-blue: lighten($blue,20%);
 }
 
 .slick-prev {
-    left: -22px;
+    left: -32px;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
     }
     &:before {
-        content: '';
+        content: '.';
         @include triangle(left,5rem,.75rem,$blue);
         [dir="rtl"] & {
             content: $slick-next-character;
@@ -144,13 +144,13 @@ $indicative-blue: lighten($blue,20%);
 }
 
 .slick-next {
-    right: -22px;
+    right: -28px;
     [dir="rtl"] & {
         left: -25px;
         right: auto;
     }
     &:before {
-        content: '';
+        content: '.';
         @include triangle(right,5rem,.75rem,$blue);
         [dir="rtl"] & {
             content: $slick-prev-character;
