@@ -128,12 +128,12 @@ div.quote-container {
       content: "⟩"; }
 
 .slick-next {
-  right: -26px; }
+  right: -28px; }
   [dir="rtl"] .slick-next {
     left: -25px;
     right: auto; }
   .slick-next:before {
-    content: '';
+    content: '.';
     width: 0;
     height: 0;
     border-top: 5rem solid transparent;
