@@ -67,7 +67,7 @@ body {
   margin: 0;
 
   .bg-container {
-    @include body-bg(url('../photos/Bisbee_panorama_2009.JPG'), no-repeat, bottom, left, 30%, 20%);
+    @include body-bg(url('../photos/bzbpano2009.jpg'), no-repeat, bottom, left, 30%, 20%);
   }
 
   &>.row {
@@ -109,6 +109,7 @@ body {
 
       .right-hand {
         margin: 0 0 1rem 1.5rem;
+        border-radius: .3rem;
         width: 45%;
         float: right;
         background: pink;
