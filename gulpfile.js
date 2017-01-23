@@ -7,8 +7,7 @@ const rename = require('gulp-rename');
 function minifyImgs() {
   return gulp.src('photos/keepers/*.jpg')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/photos'))
-    .then(console.log('images minified'));
+    .pipe(gulp.dest('dist/photos'));
 }
 
 gulp.task('minifyImgs', minifyImgs);
