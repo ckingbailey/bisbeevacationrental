@@ -1,5 +1,14 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var imagemin = require('imagemin');
-var del = require('del');
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const del = require('del');
+const rename = require('gulp-rename');
+
+function minifyImgs() {
+  return gulp.src('photos/keepers/*.jpg')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/photos'))
+    .then(console.log('images minified'));
+}
+
+gulp.task('minifyImgs', minifyImgs);
