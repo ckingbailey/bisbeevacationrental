@@ -1,0 +1,28 @@
+@import '_colors';
+@import '_type';
+@import '_layout';
+@import '_header';
+@import '_photo-page';
+@import '_my-slick-theme';
+@import '_reservations-page';
+
+@mixin body-bg($bg-img,$repeat,$v-position,$h-position,$b-w,$sepia) {
+  $filter: grayscale($b-w) sepia($sepia);
+  background: $bg-img $repeat; //$v-position $h-position;
+  -webkit-filter: $filter;
+  filter: $filter;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg-container {
+  @include body-bg(url('../photos/bzbpano2009.jpg'), no-repeat, bottom, left, 30%, 20%);
+}
