@@ -6,8 +6,9 @@
 @import '_my-slick-theme';
 @import '_reservations-page';
 
-body {
-  background: url('../photos/bzbpano2009.jpg';
+.bg-container {
+  //padding-top: 1rem;
+  background: url('../photos/bzbpano2009.jpg') no-repeat;
 }
 
 /*@mixin body-bg($bg-img,$repeat,$v-position,$h-position,$b-w,$sepia) {

@@ -23,6 +23,4 @@ function compileSass() {
 }
 
 gulp.task('minifyImgs', minifyImgs);
-gulp.task('scss', compileSass, function(){
-  gulp.watch(['scss/*.scss'], ['sass']);
-});
+gulp.task('scss', compileSass);
