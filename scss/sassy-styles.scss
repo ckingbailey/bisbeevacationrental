@@ -6,10 +6,24 @@
 @import '_my-slick-theme';
 @import '_reservations-page';
 
-.bg-container {
-  //padding-top: 1rem;
-  background: url('../photos/bzbpano2009.jpg') no-repeat;
+html {
+//  height: 100vh;
+  background-image: url('../photos/bzbpano2009.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+body {
+  background: none;
+}
+
+/*.bg-container {
+  //padding-top: 1rem;
+  height: 100vh;
+  background: url('../photos/bzbpano2009.jpg') 0 0/cover no-repeat;
+}*/
 
 /*@mixin body-bg($bg-img,$repeat,$v-position,$h-position,$b-w,$sepia) {
   $filter: grayscale($b-w) sepia($sepia);
