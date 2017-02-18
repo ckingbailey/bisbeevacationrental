@@ -29,8 +29,7 @@ here begins the header, which I will use on all pages
         <div class="header">
           <h1>Welcome to Hilltop House</h1>
 
-          <h5>129 High Road<br>
-            Bisbee, AZ</h5>
+          <h5>129 High Road<br>Bisbee, AZ</h5>
 
           <ul class="navbar">
           	<li><a href="index.html">Home</a></li>
@@ -41,18 +40,19 @@ here begins the header, which I will use on all pages
           </ul>
 
           <hr class="border">
-          <!--    <img class="border" style="width: 767px; height: 11px;" alt="" src="NavajoBorder.gif">-->
         </div>
 <!--end header-->
 
-        <div class="bodycontent">
-
-          <div class="quote-container">
-            <q class="testimonial">So much more than expected...the views are phenomenal!...and every creature comfort</q>
-            <cite>Pat Ann &amp; Cathy, Phoenix </cite>
+        <div class="row">
+          <div class="small-12 column">
+            <div class="callout quote-container">
+              <q class="testimonial">So much more than expected...the views are phenomenal!...and every creature comfort</q>
+              <cite>Pat Ann &amp; Cathy, Phoenix </cite>
+            </div>
           </div>
-
-          <div class="slideCarousel">
+        </div>
+        <div class="carousel-wrapper">
+          <div class="slide-carousel">
             <div><img src="photos/living.jpg"/></div>
             <div><img src="photos/kitchen.jpg"/></div>
             <div><img src="photos/diningandkitchen.jpg"/></div>
@@ -62,6 +62,10 @@ here begins the header, which I will use on all pages
             <div><img src="photos/breakfastnook.jpg"/></div>
             <div><img src="photos/deckchairs.jpg"/></div>
             <div><img src="photos/baywindow.jpg"/></div>
+          </div>
+          <div class="slider-nav-container">
+            <div class="slider-nav"></div>
+          </div>
           </div>
         </div>
       </div>
@@ -75,13 +79,14 @@ here begins the header, which I will use on all pages
 
   <script type="text/javascript">
   $(document).ready(function(){
-    $('.slideCarousel').slick({
+    $('.slide-carousel').slick({
         centerMode: true,
-        centerPadding: '2rem',
+        centerPadding: '.125rem',
         dots: true,
         arrows: true,
         infinite: true,
-        variableWidth: true
+        //appendArrows: $('.slider-nav-container'),
+        appendDots: $('.slider-nav-container')
     });
   });
 </script>

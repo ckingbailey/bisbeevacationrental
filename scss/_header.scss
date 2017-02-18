@@ -1,11 +1,10 @@
-// @import colors
-
 @mixin navbar-button($text-color,$bg-color,$border-color) {
-  padding: 0.4rem 1.3rem;
+  padding: 0.3rem .8rem;
   color:$text-color;
+  font-weight: 700;
   background-color: $bg-color;
   border-radius: .3rem;
-  transition: .25s ease-in;
+  transition: .15s ease-in;
   text-decoration: none;
 }
 
@@ -23,27 +22,25 @@
     }
   }
 
-  h3 {
-    color: $brown;
+  h5 {
+    color: $darkBrown;
     font-weight: 400;
   }
 
   ul.navbar {
 
-    font-size: medium;
-//    font-weight: 700;
+    font-size: .95rem;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
 
     li {
       display: inline;
       list-style-type: none;
-      width: 12rem;
+//      width: 12rem;
 
       a {
         display: inline-block;
-//        width: 8rem;
-        @include navbar-button($yellowOrange,$darkPurple,$darkPurple);
+        @include navbar-button(lighten($yellowOrange,5%),$darkPurple,$darkPurple);
 
         &:hover{
           @include navbar-button($brown,lighten($blue,20%),$darkBlue);

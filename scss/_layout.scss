@@ -6,47 +6,41 @@ $main-container-border: .15rem solid lighten($sageGreen,10%);
 
 $main-container-outline: .2rem solid $off-white;
 
-body {
-  //height: 100%;
-//  padding: 0;
-  //margin: 0;
+.row {
+    background: none;
+}
 
-  &>.row {
-//    margin: 1.5rem auto 2.5rem;
+.maincontainerwrap {
+  background: $main-container-bg;
+  border-radius: .5rem;
+  padding: .25rem;
+}
+
+.photo-wrapper {
+  background: $pallid-white;
+  padding: .375rem;
+  overflow: hidden;
+  border: .0625rem solid $sageGreen;
+}
+
+.maincontainer {
+  background: $main-container-bg;
+  border-radius: .5rem;
+  padding: 1.25rem 1.5rem 0.5rem;
+  border: $main-container-border;
+
+  .photo-wrapper {
+    float: right;
+    margin: 0 0 .5rem .5rem;
+  }
+
+@media screen and (max-width: 640) {
+    .photo-wrapper {
+      margin: 0;
+      width: 100%;
       background: none;
-  }
-
-  .maincontainerwrap {
-    background: $main-container-bg;
-    border-radius: .5rem;
-    padding: .25rem;
-  }
-
-  .maincontainer {
-    background: $main-container-bg;
-    border-radius: .5rem;
-    padding: 1.25rem 1.5rem 0.5rem;
-    border: $main-container-border;
-
-    .right-hand {
-      margin: 0 0 1rem 1.5rem;
-      border-radius: .3rem;
-      width: 45%;
-      float: right;
-      background: pink;
-
-      .photo-wrapper {
-        border-radius: .3rem;
-        overflow: hidden;
-        border: .25rem solid lighten($sageGreen,0%);
-        box-shadow: 0 .1rem 0.1rem darken($sageGreen,30%);
-      }
-
-      img {
-        float: right;
-        width: 100%;
-        box-sizing: border-box;
-      }
+      padding: 0;
+      border: none;
     }
   }
 }

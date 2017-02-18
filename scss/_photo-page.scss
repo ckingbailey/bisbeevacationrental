@@ -6,8 +6,8 @@
 }
 
 div.quote-container {
-  margin: 2rem 1.25rem;
-  padding: .75rem 1.5rem;
+//  margin: 2rem 1.25rem;
+//  padding: .75rem 1.5rem;
   border: .75rem solid lighten($blue,35%);
   background: lighten($blue,38%);
   border-radius: .4rem;
@@ -23,13 +23,4 @@ cite::before {
   content: "\A\2013\00a0";
   white-space: pre;
 }
-}
-
-.slideCarousel {
-  background: $pallid-white;
-//  border: .15rem solid lighten($sageGreen, 25%);
-  @include glow-shadow(.25rem,.25rem,.25rem,0,$sageGreen,25%);
-  border-radius: .3rem;
-  margin: 1rem 1.5rem;
-  padding: 1.5rem .25rem;
 }
