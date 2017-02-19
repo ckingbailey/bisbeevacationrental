@@ -81,12 +81,12 @@ here begins the header, which I will use on all pages
   $(document).ready(function(){
     $('.slide-carousel').slick({
         centerMode: true,
-        centerPadding: '.125rem',
+        //centerPadding: '.125rem',
         dots: true,
         arrows: true,
         infinite: true,
-        //appendArrows: $('.slider-nav-container'),
-        appendDots: $('.slider-nav-container')
+        appendArrows: $('.slider-nav'),
+        appendDots: $('.slider-nav')
     });
   });
 </script>

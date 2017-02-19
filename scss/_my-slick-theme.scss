@@ -7,20 +7,21 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$indicative-blue: lighten($blue,20%);
+$indicative-blue: $blue;
+$dot-blue: darken($blue,25%);
 
 //$slick-font-path: "./fonts/" !default;
 $slick-font-family: Georgia, serif;
 $slick-loader-path: "../slick/";
 $slick-arrow-color: $indicative-blue !default;
-$slick-dot-color: black !default;
+$slick-dot-color: $dot-blue !default;
 $slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\9668\25c4" !default;
-$slick-next-character: "\9658\25ba" !default;
+$slick-prev-character: "\25c0" !default;
+$slick-next-character: "\25b6" !default;
 $slick-dot-character: "\25cf" !default;
 $slick-dot-size: 1.5rem !default;
-$slick-opacity-default: 0.75 !default;
-$slick-opacity-on-hover: 1 !default;
+$slick-opacity-default: 0.7 !default;
+$slick-opacity-on-hover: .9 !default;
 $slick-opacity-not-active: 0.25 !default;
 
 // a mixin to make css arrows L & R
@@ -96,23 +97,13 @@ $slick-opacity-not-active: 0.25 !default;
 /* Arrows */
 
 .slider-nav-container {
-  background: salmon;
-  //position: relative;
-  //bottom: 20px;
-  //left: 0;
-  //right: 0;
-  //z-index: 3;
   text-align: center;
 
   > .slider-nav {
-    background: blue;
     display: inline-block;
 
     .slick-prev,
     .slick-next {
-        //position: relative;
-        //left: auto;
-        //right: auto;
         display: inline-block;
         height: 20px;
         width: 20px;
@@ -121,7 +112,9 @@ $slick-opacity-not-active: 0.25 !default;
         cursor: pointer;
         background: transparent;
         color: transparent;
-        //top: 50%;
+        position: relative;
+//what does all this shit do?
+        top: 50%;
         //-webkit-transform: translate(0, -50%);
         //-ms-transform: translate(0, -50%);
         //transform: translate(0, -50%);
@@ -140,9 +133,14 @@ $slick-opacity-not-active: 0.25 !default;
             opacity: $slick-opacity-not-active;
         }
         &:before {
+            position: relative;
+            top: .7rem;
             font-family: $slick-font-family;
             font-size: 1rem;
-            //line-height: 0;
+            font-weight: 400;
+            line-height: 1.25;
+            border: none;
+            outline: none;
             color: $slick-arrow-color;
             opacity: $slick-opacity-default;
             -webkit-font-smoothing: antialiased;
@@ -152,30 +150,32 @@ $slick-opacity-not-active: 0.25 !default;
 
     .slick-prev {
         float: left;
-        [dir="rtl"] & {
+        /*[dir="rtl"] & {
             left: auto;
             right: -25px;
-        }
+        }*/
         &:before {
             content: $slick-prev-character;
-            [dir="rtl"] & {
+            //top: .75rem;
+            /*[dir="rtl"] & {
                 content: $slick-next-character;
-            }
+            }*/
         }
     }
 
 
     .slick-next {
         float: right;
-        [dir="rtl"] & {
+        /*[dir="rtl"] & {
             left: -25px;
             right: auto;
-        }
+        }*/
         &:before {
             content: $slick-next-character;
-            [dir="rtl"] & {
+            //top: .75rem;
+            /*[dir="rtl"] & {
                 content: $slick-prev-character;
-            }
+            }*/
         }
     }
 
@@ -237,9 +237,14 @@ $slick-opacity-not-active: 0.25 !default;
                   -moz-osx-font-smoothing: grayscale;
               }
           }
-          &.slick-active button:before {
+          &.slick-active button {
+            &:hover:before{
+              opacity: $slick-opacity-on-hover;
+            }
+            &:before {
               color: $slick-dot-color-active;
               opacity: $slick-opacity-default;
+            }
           }
       }
     }
