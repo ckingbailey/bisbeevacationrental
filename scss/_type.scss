@@ -30,3 +30,13 @@ a {
 a:hover {
   color: $blue;
 }
+
+ul.features-list {
+  list-style-type: none;
+
+  & li:before {
+    font-size: .9rem;
+    margin-right: .25rem;
+    content: '\2756\0020';
+  }
+}
