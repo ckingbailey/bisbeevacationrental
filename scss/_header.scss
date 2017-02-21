@@ -1,11 +1,24 @@
-@mixin navbar-button($text-color,$bg-color,$border-color) {
+@mixin navbar-button($text-color,$bg-color,$hover-text-color,$hover-bg-color) {
   padding: 0.3rem .8rem;
   color:$text-color;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: .1875rem;
   background-color: $bg-color;
   border-radius: .3rem;
   transition: .15s ease-in;
   text-decoration: none;
+
+  &:hover {
+    padding: 0.3rem .8rem;
+    color:$hover-text-color;
+    font-weight: 400;
+    letter-spacing: .1875rem;
+    background-color: $hover-bg-color;
+    border-radius: .3rem;
+    transition: .15s ease-in;
+    text-decoration: none;
+
+  }
 }
 
 .header {
@@ -40,11 +53,7 @@
 
       a {
         display: inline-block;
-        @include navbar-button($sand,$darkPurple,$darkPurple);
-
-        &:hover{
-          @include navbar-button($brown,lighten($blue,20%),$darkBlue);
-        }
+        @include navbar-button($sand,$darkPurple,$brown,$indicative-blue);
       }
     }
   }
