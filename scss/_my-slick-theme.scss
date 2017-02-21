@@ -30,8 +30,8 @@ $slick-opacity-not-active: 0.25 !default;
   $no-triangle: $triangle transparent;
   width: 0;
   height: 0;
-  border-top: $triangle-height solid transparent;
-  border-bottom: $triangle-height solid transparent;
+  border-top: $triangle-height/2 solid transparent;
+  border-bottom: $triangle-height/2 solid transparent;
   @if $dir=='left' {
     border-right: $yes-triangle;
     border-left: $no-triangle;
@@ -134,11 +134,11 @@ $slick-opacity-not-active: 0.25 !default;
         }
         &:before {
             position: relative;
-            top: .5rem;
+            top: .05rem;
             font-family: $slick-font-family;
-            font-size: 1rem;
+            //font-size: 1rem;
             font-weight: 400;
-            line-height: 1.25;
+            line-height: 0;
             border: none;
             outline: none;
             color: $slick-arrow-color;
@@ -155,7 +155,8 @@ $slick-opacity-not-active: 0.25 !default;
             right: -25px;
         }*/
         &:before {
-            content: $slick-prev-character;
+            content: '';
+            @include triangle(left, 1rem, .5rem, $indicative-blue);
             //top: .75rem;
             /*[dir="rtl"] & {
                 content: $slick-next-character;
@@ -171,7 +172,8 @@ $slick-opacity-not-active: 0.25 !default;
             right: auto;
         }*/
         &:before {
-            content: $slick-next-character;
+            content: '';
+            @include triangle(right, 1rem, .5rem, $indicative-blue);
             //top: .75rem;
             /*[dir="rtl"] & {
                 content: $slick-prev-character;
@@ -201,7 +203,7 @@ $slick-opacity-not-active: 0.25 !default;
             display: inline-block;
             height: 20px;
             width: 20px;
-            margin: 0 5px;
+            margin: 0 .1875rem;
             padding: 0;
             cursor: pointer;
             button {
