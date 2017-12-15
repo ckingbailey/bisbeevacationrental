@@ -1,0 +1,27 @@
+@media screen and (max-width: 640px) {
+  .bodycontent .quote-container {
+    border-width: 2px;
+  }
+    .bodycontent .testimonial {
+      font-size: 1rem;
+    }
+    .bodycontent .citation {
+      line-height: 1;
+    }
+    .bodycontent .citation:before {
+    }
+}
+
+.quote-container {
+  border: 0.75rem solid var(--baby-blue);
+  background: var(--pale-blue);
+  border-radius: .4rem;
+}
+  .testimonial {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .citation:before {
+    content: "\A\2013\00a0";
+    white-space: pre; }

@@ -12,15 +12,15 @@ div.quote-container {
   background: lighten($blue,38%);
   border-radius: .4rem;
 
-q.testimonial {
-  font-size: 1.25rem;
-  font-weight: 400;
-  font-style: italic;
+  q.testimonial {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
 
-}
+  }
 
-cite::before {
-  content: "\A\2013\00a0";
-  white-space: pre;
-}
+  cite::before {
+    content: "\A\2013\00a0";
+    white-space: pre;
+  }
 }

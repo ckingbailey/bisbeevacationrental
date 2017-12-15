@@ -1,20 +1,17 @@
 @mixin navbar-button($text-color,$bg-color,$hover-text-color,$hover-bg-color) {
-  padding: 0.3rem .8rem;
+  margin-top: .25rem;
+  padding: .2rem .6rem;
   color:$text-color;
   font-weight: 400;
   letter-spacing: .1875rem;
   background-color: $bg-color;
   border-radius: .3rem;
-  transition: .15s ease-in;
+  transition: .1s ease-in;
   text-decoration: none;
 
   &:hover {
-    padding: 0.3rem .8rem;
     color:$hover-text-color;
-    font-weight: 400;
-    letter-spacing: .1875rem;
     background-color: $hover-bg-color;
-    border-radius: .3rem;
     transition: .15s ease-in;
     text-decoration: none;
 
@@ -36,6 +33,7 @@
   }
 
   h5 {
+    margin-bottom: .25rem;
     color: $darkBrown;
     font-weight: 400;
   }
