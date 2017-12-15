@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Photos of Hilltop House</title>
+  <meta name="description" content="photos of vacation rental cottage in Bisbee, AZ">
+  <meta name="keywords" content="Bisbee, Bisbee AZ, Bisbee Vacation Rental">
+  <meta content="CKB" name="author">
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="row maincontainerwrap">
+    <div class="small-12 medium-offset-1 medium-10 column maincontainer">
+      <div class="credits-container">
+        <i id="creditsBtn" class="photo-credit-btn"></i>
+        <aside id="photoCredit" class="credit-box hidden">
+          <span>background photo credit:
+            <a
+              class="credit-link"
+              href="https://en.wikipedia.org/wiki/File:Bisbee_panorama_2009.JPG"
+              target="_blank"
+            >TransporterMan</a>
+          </span>
+        </aside>
+      </div>
+    <!--header-->
+      <div class="header">
+        <h1 class="title">
+          <span class="welcome">Welcome to</span><br>
+          <span>Hatpin Cottage</span></h1>
+        <h5 class="address">129 High Road<br>Bisbee, AZ</h5>
+        <ul class="navbar">
+        	<li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a></li>
+        	<li class="nav-item">
+            <a class="nav-link" href="photos.html">Photos</a></li>
+         	<li class="nav-item">
+            <a class="nav-link" href="reservations.html">Reserve</a></li>
+        </ul>
+        <hr class="border">
+      </div>
+    <!--end header-->
+      <div class="bodycontent">
+        <div class="row">
+          <div class="small-12 column">
+            <div class="callout quote-container">
+              <q class="testimonial">So much more than expected...the views are phenomenal!...and every creature comfort</q>
+              <cite class="citation">Pat Ann &amp; Cathy, Phoenix </cite>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-wrapper">
+          <div class="slide-carousel">
+            <div><img src="photos/living.jpg"/></div>
+            <div><img src="photos/kitchen.jpg"/></div>
+            <div><img src="photos/diningandkitchen.jpg"/></div>
+            <div><img src="photos/bed0.jpg"/></div>
+            <div><img src="photos/bed1.jpg"/></div>
+            <div><img src="photos/bed2.jpg"/></div>
+            <div><img src="photos/breakfastnook.jpg"/></div>
+            <div><img src="photos/deckchairs.jpg"/></div>
+            <div><img src="photos/baywindow.jpg"/></div>
+          </div>
+          <div class="slider-nav-container">
+            <div class="slider-nav"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--slick carousel js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var button = document.getElementById("creditsBtn");
+      var photoCredit = document.getElementById("photoCredit");
+      function toggleCredits(event) {
+        event.preventDefault();
+        if (photoCredit.classList.contains("hidden")) {
+          photoCredit.classList.remove("hidden");
+        } else photoCredit.classList.add("hidden");
+      }
+      button.addEventListener("click", toggleCredits);
+    })();
+    $(document).ready(function(){
+      var isMobile = window.matchMedia("(max-width; 640px)").matches;
+      console.log(window.matchMedia("(max-width; 640px)"));
+      $('.slide-carousel').slick({
+          centerMode: !isMobile,
+          slidesToShow: 1,
+          //centerPadding: '.125rem',
+          dots: true,
+          arrows: true,
+          infinite: true,
+          appendArrows: $('.slider-nav-container'),
+          appendDots: $('.slider-nav')
+      });
+    });
+  </script>
+</body>
+</html>

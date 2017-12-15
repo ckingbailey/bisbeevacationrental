@@ -1,0 +1,141 @@
+@media screen and (max-width: 640px) {
+  div.carousel-wrapper {
+    margin-left: -0.5rem; margin-right: -0.5rem;
+    border-radius: 0;
+  }
+}
+
+/* Carousel */
+.carousel-wrapper {
+  position: relative;
+  background: var(--pallid-white);
+  box-shadow: 0 0 6px 2px #e4e9d9;
+  border-radius: .3rem;
+  margin: 1rem 0 2rem;
+  padding: .75rem .25rem; }
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("../slick/../slick/ajax-loader.gif") center center no-repeat; }
+.slick-list .slick-slide:focus {
+  border: none;
+  outline: none;
+  box-shadow: none; }
+  /* Arrows */
+  .slider-nav-container {
+    text-align: center;
+    /* Dots */ }
+    .slider-nav-container .slick-prev,
+    .slider-nav-container .slick-next {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      line-height: 0px;
+      font-size: 0px;
+      cursor: pointer;
+      background: transparent;
+      color: transparent;
+      position: relative;
+      top: 50%;
+      padding: 0;
+      border: none;
+      outline: none; }
+      .slider-nav-container .slick-prev:hover,
+      .slider-nav-container .slick-next:hover {
+        outline: none;
+        background: transparent;
+        color: transparent; }
+        .slider-nav-container .slick-prev:hover:before,
+        .slider-nav-container .slick-next:hover:before {
+          opacity: 0.9; }
+      .slider-nav-container .slick-prev.slick-disabled:before,
+      .slider-nav-container .slick-next.slick-disabled:before {
+        opacity: 0.25; }
+      .slider-nav-container .slick-prev:before,
+      .slider-nav-container .slick-next:before {
+        position: relative;
+        top: .05rem;
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 0;
+        border: none;
+        outline: none;
+        color: var(--blue);
+        opacity: 0.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      .slider-nav-container .slick-prev:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 0.5rem solid transparent;
+        border-bottom: 0.5rem solid transparent;
+        border-right: 0.5rem solid var(--blue);
+        border-left: 0.5rem solid transparent;
+      }
+      .slider-nav-container .slick-next:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 0.5rem solid transparent;
+        border-bottom: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        border-left: 0.5rem solid var(--blue);
+      }
+    .slider-nav-container > .slider-nav {
+      display: inline-block; }
+      .slider-nav-container > .slider-nav .slick-dotted.slick-slider {
+        margin-bottom: 30px; }
+      .slider-nav-container > .slider-nav .slick-dots {
+        list-style: none;
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%; }
+        .slider-nav-container > .slider-nav .slick-dots li {
+          position: relative;
+          display: inline-block;
+          height: 20px;
+          width: 20px;
+          margin: 0 .125rem;
+          padding: 0;
+          cursor: pointer; }
+          .slider-nav-container > .slider-nav .slick-dots li button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 20px;
+            width: 20px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer; }
+            .slider-nav-container > .slider-nav .slick-dots li button:hover, .slider-nav-container > .slider-nav .slick-dots li button:focus {
+              outline: none; }
+              .slider-nav-container > .slider-nav .slick-dots li button:hover:before, .slider-nav-container > .slider-nav .slick-dots li button:focus:before {
+                opacity: 0.9; }
+            .slider-nav-container > .slider-nav .slick-dots li button:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: "●";
+              width: 20px;
+              height: 20px;
+              font-family: Georgia, serif;
+              font-size: 1.5rem;
+              line-height: 20px;
+              text-align: center;
+              color: #0057a2;
+              opacity: 0.25;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale; }
+          .slider-nav-container>.slider-nav .slick-dots li.slick-active button:hover:before {
+            opacity: 0.9; }
+          .slider-nav-container>.slider-nav .slick-dots li.slick-active button:before {
+            color: #0057a2;
+            opacity: 0.7; }
+  .slick-slide {
+    padding: 0 .375rem; }

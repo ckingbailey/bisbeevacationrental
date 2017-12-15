@@ -1,0 +1,33 @@
+$primary-font-family: Georgia serif;
+
+@mixin body-bg($bg-img,$repeat,$v-position,$h-position,$b-w,$sepia) {
+  $filter: grayscale($b-w) sepia($sepia);
+  background: $bg-img $repeat; //$v-position $h-position;
+  -webkit-filter: $filter;
+  filter: $filter;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  font-family: $primary-font-family;
+}
+
+p, div {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+}
+
+.bg-container {
+  @include body-bg(url('../photos/bzbpano2009.jpg'), no-repeat, bottom, left, 30%, 20%);
+}

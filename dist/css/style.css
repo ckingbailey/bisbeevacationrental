@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import "./colors.css";
+@import "./header.css";
+@import "./photos.css";
+@import "./slick-theme.css";
+@import "./reserve.css";
+
+/* universal styles */
+html, body {
+  height: 100%;
+}
+
+html {
+  background-image: url("../photos/bzbpano2009.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  background: none;
+  font-family: Georgia, serif;
+  color: var(--dark-brown);
+}
+
+h1, h2, h3, h4, h5, h6,
+div, p,
+a, form,
+ul, ol, li, dl, dd,
+q, blockquote, cite,
+td, th {
+  font-family: Georgia, serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+.row {
+  background: none;
+}
+
+/* media queries */
+@media screen and (max-width: 640px) {
+  html {
+    background-image: none;
+  }
+
+  body {
+    background-color: var(--off-white);
+  }
+
+  body .maincontainer {
+    box-shadow: none;
+    border-left: none; border-right: none;
+    padding: .65rem;
+  }
+
+  .bodycontent .photo-wrapper {
+    margin: 0 auto .5rem;
+    width: 100%;
+  }
+
+  .headline, .blurb {
+    padding: 0 .6rem;
+  }
+
+  .bodycontent .features-list {
+    margin-left: 1.25rem;
+  }
+}
+
+/* specific styles */
+.credits-container {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  color: var(--dark-blue);
+}
+
+.photo-credit-btn {
+  display: block;
+  box-shadow: 0 0 1px 0 var(--dark-blue);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--baby-blue);
+  color: inherit;
+}
+  .photo-credit-btn:hover {
+    background-color: var(--grey-blue);
+    color: var(--dark-purple);
+  }
+  .photo-credit-btn:before {
+    content: "i";
+    position: relative;
+    left: .4rem;
+    bottom: .4rem;
+    font-size: .65rem;
+    color: inherit;
+  }
+  .credit-box {
+    position: absolute;
+    bottom: 1.35rem;
+    right: .1rem;
+    z-index: 2;
+    box-shadow: 0 0 2px 0 var(--pale-blue);
+    border-radius: 1px;
+    border: 1px solid var(--dark-blue);
+    padding: .5rem;
+    background-color: var(--pale-blue);
+    font-size: .95rem;
+    font-style: normal;
+  }
+  .credit-box.hidden {
+    display: none;
+  }
+    .credit-link {
+      color: var(--blue);
+    }
+      .credit-link:hover {
+        color: var(--dark-blue);
+      }
+
+.maincontainerwrap {
+  height: 100%;
+}
+
+.maincontainer {
+  position: relative;
+  box-shadow: 2px 0 0 0 var(--off-white), -2px 0 0 0 var(--off-white);
+  border-left: 0.15rem solid var(--sage-green);
+  border-right: 0.15rem solid var(--sage-green);
+  min-height: 100%;
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--off-white);
+}
+
+.photo-wrapper {
+  float: right;
+  overflow: hidden;
+  margin: 0 0 .5rem .5rem;  background: var(--pallid-white);
+  padding: .375rem;
+  border: 0.0625rem solid var(--grey); }
+
+.features-list {
+  margin-left: 2rem;
+  margin-bottom: .5rem;
+  list-style-type: none;
+}
+  .features-item:before {
+    content: '\2756\0020';
+    margin-right: .25rem;
+    font-size: .75rem;
+    color: var(--dark-brown);
+  }

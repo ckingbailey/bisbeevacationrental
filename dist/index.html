@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Hilltop House - A Vacation Rental in Bisbee, AZ</title>
+  <meta name="description" content="Vacation rental cottage in Bisbee, AZ">
+  <meta name="keywords" content="Bisbee, Bisbee AZ, Bisbee Vacation Rental">
+  <meta content="CKB" name="author">
+  <meta content="text/html" charset="utf-8" http-equiv="content-type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="row maincontainerwrap">
+    <div class="small-12 medium-offset-1 medium-10 column maincontainer">
+    <div class="credits-container">
+      <i id="creditsBtn" class="photo-credit-btn"></i>
+      <aside id="photoCredit" class="credit-box hidden">
+        <span>background photo credit:
+          <a
+            class="credit-link"
+            href="https://en.wikipedia.org/wiki/File:Bisbee_panorama_2009.JPG"
+            target="_blank"
+          >TransporterMan</a>
+        </span>
+      </aside>
+    </div>
+    <!--header-->
+      <div class="header">
+        <h1 class="title">
+          <span class="welcome">Welcome to</span><br>
+          <span>Hatpin Cottage</span></h1>
+        <h5 class="address">129 High Road<br>Bisbee, AZ</h5>
+        <ul class="navbar">
+        	<li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a></li>
+        	<li class="nav-item">
+            <a class="nav-link" href="photos.html">Photos</a></li>
+         	<li class="nav-item">
+            <a class="nav-link" href="reservations.html">Reserve</a></li>
+        </ul>
+        <hr class="border">
+      </div>
+    <!--end header-->
+      <div class="bodycontent">
+    <!--right-hand photo-->
+        <div class="photo-wrapper">
+          <img title="Hairpin Cottage" alt="view of Hairpin Cottage from the yard" src="photos/SideHouseWideangle.jpg">
+        </div>
+        <div class="left-hand">
+          <h3 class="headline">Panoramic Views of the Mountains and Mexico. Walk to Town in Minutes.</h3>
+          <p class="blurb">Once a prosperous mining town, Bisbee became a vibrant artists'
+          community after the mine closed in the 1970s and artists moved in. Hilltop House sits just a quick five minutes' walk from downtown Old Bisbee, where you will find restaurants, art galleries, and a colorful
+          nightlife. Nearby are hiking, bird watching, historic towns, and Mexico.<br>A miner's cottage beautifully refurbished and furnished in Southwestern style, Hilltop House features a fully equipped kitchen with gas range, and a TV and DVD player, and two lovely porches overlooking the town. From the house you can see down into Bisbee, and across the high desert as far as the mountains of Mexico.
+          </p>
+          <ul class="features-list">
+            <li class="features-item">Two bedrooms, 1&#189; bath</li>
+            <li class="features-item">27" TV, Cable</li>
+            <li class="features-item">Wireless internet available</li>
+            <li class="features-item">Barbeque</li>
+            <li class="features-item">Washer &amp; Dryer</li>
+            <li class="features-item">Off street parking</li>
+            <li class="features-item">Air conditioned</li>
+            <li class="features-item">Weekends from $250/Weekly from $650</li>
+            <li class="features-item">No pets, no smoking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var button = document.getElementById("creditsBtn");
+      var photoCredit = document.getElementById("photoCredit");
+      function toggleCredits(event) {
+        event.preventDefault();
+        if (photoCredit.classList.contains("hidden")) {
+          photoCredit.classList.remove("hidden");
+        } else photoCredit.classList.add("hidden");
+      }
+      button.addEventListener("click", toggleCredits);
+    })();
+  </script>
+</body>
+</html>
