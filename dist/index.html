@@ -14,7 +14,19 @@
 <body>
   <div class="row maincontainerwrap">
     <div class="small-12 medium-offset-1 medium-10 column maincontainer">
-<!--header-->
+    <div class="credits-container">
+      <i id="creditsBtn" class="photo-credit-btn"></i>
+      <aside id="photoCredit" class="credit-box hidden">
+        <span>background photo credit:
+          <a
+            class="credit-link"
+            href="https://en.wikipedia.org/wiki/File:Bisbee_panorama_2009.JPG"
+            target="_blank"
+          >TransporterMan</a>
+        </span>
+      </aside>
+    </div>
+    <!--header-->
       <div class="header">
         <h1 class="title">
           <span class="welcome">Welcome to</span><br>
@@ -30,9 +42,9 @@
         </ul>
         <hr class="border">
       </div>
-<!--end header-->
+    <!--end header-->
       <div class="bodycontent">
-<!--right-hand photo-->
+    <!--right-hand photo-->
         <div class="photo-wrapper">
           <img title="Hairpin Cottage" alt="view of Hairpin Cottage from the yard" src="photos/SideHouseWideangle.jpg">
         </div>
@@ -57,4 +69,18 @@
       </div>
     </div>
   </div>
-</body></html>
+  <script>
+    (function() {
+      var button = document.getElementById("creditsBtn");
+      var photoCredit = document.getElementById("photoCredit");
+      function toggleCredits(event) {
+        event.preventDefault();
+        if (photoCredit.classList.contains("hidden")) {
+          photoCredit.classList.remove("hidden");
+        } else photoCredit.classList.add("hidden");
+      }
+      button.addEventListener("click", toggleCredits);
+    })();
+  </script>
+</body>
+</html>

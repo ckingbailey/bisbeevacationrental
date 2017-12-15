@@ -15,6 +15,18 @@
 <body>
   <div class="row maincontainerwrap">
     <div class="small-12 medium-offset-1 medium-10 column maincontainer">
+      <div class="credits-container">
+        <i id="creditsBtn" class="photo-credit-btn"></i>
+        <aside id="photoCredit" class="credit-box hidden">
+          <span>background photo credit:
+            <a
+              class="credit-link"
+              href="https://en.wikipedia.org/wiki/File:Bisbee_panorama_2009.JPG"
+              target="_blank"
+            >TransporterMan</a>
+          </span>
+        </aside>
+      </div>
     <!--header-->
       <div class="header">
         <h1 class="title">
@@ -66,11 +78,22 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script type="text/javascript">
+    (function() {
+      var button = document.getElementById("creditsBtn");
+      var photoCredit = document.getElementById("photoCredit");
+      function toggleCredits(event) {
+        event.preventDefault();
+        if (photoCredit.classList.contains("hidden")) {
+          photoCredit.classList.remove("hidden");
+        } else photoCredit.classList.add("hidden");
+      }
+      button.addEventListener("click", toggleCredits);
+    })();
     $(document).ready(function(){
-      var isMobile;
+      var isMobile = window.matchMedia("(max-width; 640px)").matches;
       console.log(window.matchMedia("(max-width; 640px)"));
       $('.slide-carousel').slick({
-          centerMode: false,
+          centerMode: !isMobile,
           slidesToShow: 1,
           //centerPadding: '.125rem',
           dots: true,
