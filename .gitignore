@@ -1,7 +1,13 @@
 .DS_Store
+.sass-cache/
+*.css.map
 
-scss/.sass-cache/
-
+#let's just forget about these misbegotten experiments
 oldVersion/
+fdnTest/
 
+# binary files
 photos/
+
+#dependencies
+node_modules/
