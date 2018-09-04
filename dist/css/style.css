@@ -7,19 +7,16 @@
 
 /* universal styles */
 html, body {
-  height: 100%;
-}
-
-html {
-  background-image: url("../photos/bzbpano2009.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  margin: 0;
 }
 
 body {
-  background: none;
+  background-color: #8d7463;
+  background-image: url("../photos/bzbpano2009web.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
   font-family: Georgia, serif;
   color: var(--dark-brown);
 }
