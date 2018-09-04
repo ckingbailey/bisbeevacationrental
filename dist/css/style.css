@@ -46,6 +46,50 @@ a:hover {
   background: none;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-basis-0 {
+  flex-basis: 0%;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.pad-left-1 {
+  padding-left: 1rem;
+}
+
+.pad-right-1 {
+  padding-right: 1rem;
+}
+
+.pad-top-1 {
+  padding-top: 1rem;
+}
+
+.pad-bottom-1 {
+  padding-bottom: 1rem;
+}
+
 /* media queries */
 @media screen and (max-width: 640px) {
   html {
